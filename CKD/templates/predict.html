@@ -1,0 +1,53 @@
+{% extends 'main.html' %} {% block content %}
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    
+    {% if pred == 1 %}
+    <div class="jumbotron">
+      <h1 class="display-4" style="margin-bottom: 25px; width: max-content">
+        You have a Chronic Kidney Disease !
+      </h1>
+      <p class="lead" style="font-size: 20px">
+        Based on the information provided, it appears that you may have signs of Chronic Kidney Disease (CKD). 
+		We strongly recommend consulting with a healthcare professional
+		for further evaluation and guidance.
+      </p>
+      <hr class="my-4" />
+      <p class="lead" style="font-size: 20px">
+        Please schedule an appointment with your doctor as soon as possible.
+      </p>
+      <a
+        class="btn btn-primary btn-lg"
+        href="https://www.who.int/"
+        role="button"
+        style="margin-top: 20px"
+        >Learn more</a
+      >
+    </div>
+    {% else %}
+    <div class="jumbotron">
+      <h1 class="display-4" style="margin-bottom: 25px">
+        Great! There are no signs of Chronic Kidney Disease (CKD).
+      </h1>
+      <p class="lead" style="font-size: 20px">
+        Your results do not suggest signs of Chronic Kidney Disease (CKD). 
+        However, it's essential to maintain regular health check-ups to monitor your kidney health and overall well-being.
+      </p>
+      <hr class="my-4" />
+      <p class="lead" style="font-size: 20px">
+        Adopting a balanced diet can help prevent diseases and promote overall health.
+      </p>
+      <a
+        class="btn btn-primary btn-lg"
+        href="https://www.who.int/"
+        role="button"
+        style="margin-top: 20px"
+        >Learn more</a
+      >
+    </div>
+    {% endif %}
+  </div>
+  <div class="col-md-3"></div>
+</div>
+{% endblock %}
